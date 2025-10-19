@@ -1,0 +1,59 @@
+﻿<Window x:Class="proYP04.Order"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proYP04"
+        mc:Ignorable="d"        
+        FontFamily="Bahnschrift"
+        Title="Order" Height="450" Width="500">
+    
+    <Grid HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Оформление заказа"  Grid.Row="0" Grid.Column="0" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
+
+        <TextBlock Text="Имя: " x:Name="TBName" Grid.Column="1" Grid.Row="1" FontSize="19" Height="30" />
+
+        <TextBlock Text="Фамилия: " x:Name="TBSurname" Grid.Column="1" Grid.Row="2" FontSize="19" Height="30" />
+
+        <TextBlock Text="Отчество: " x:Name="TBPatronymic" Grid.Column="1" Grid.Row="3" FontSize="19" Height="30" />
+
+        <TextBlock Text="Адрес: " x:Name="TBadress" Grid.Row="4"  FontSize="19" Height="30"/>
+
+        <TextBlock Text="Этаж: " x:Name="TBFloor" Grid.Row="5"  FontSize="19" Height="30"/>
+
+        <TextBlock Text="Подъезд: " x:Name="TBEntrance" Grid.Row="6"  FontSize="19" Height="30"/>
+
+        <TextBlock Text="Скидка: "  x:Name="TBDiscount" Grid.Row="7"  FontSize="19" Height="30"/>
+
+        <TextBlock Text="Сумма к оплате: "  x:Name="TBSum" Grid.Row="8"  FontSize="19" Height="30"/>
+
+        <TextBlock Text="Email: "  x:Name="TBEmail" Grid.Row="9"  FontSize="19" Height="30"/>
+
+
+        <Button x:Name="BTNdesignOrder" Grid.Row="10" Background="#FF49758C" Foreground="White" Width="130" Height="35" HorizontalAlignment="Center" Content="Подтвердить заказ" Click="BTNdesignOrder_Click"/>
+
+        <StackPanel Grid.Row="11" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,0,0">
+            <Image Source="Social/VK.png" Width="24" Height="24" Margin="5" Cursor="Hand" ToolTip="Facebook" MouseDown="Image_MouseDown" Tag="https://vk.com"/>
+            <Image Source="Social/TG.png" Width="24" Height="24" Margin="5" Cursor="Hand" ToolTip="Instagram" MouseDown="Image_MouseDown_1" Tag="https://web.telegram.org/"/>
+        </StackPanel>
+    </Grid>
+</Window>

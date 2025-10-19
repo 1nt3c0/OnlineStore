@@ -1,0 +1,233 @@
+﻿<Window x:Class="proYP04.UserWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proYP04"
+        mc:Ignorable="d"
+        FontFamily="Bahnschrift"
+        Title="UserWin" Height="510" Width="800">
+    <Grid >
+        <TabControl>
+            <TabItem Header="Личный кабинет">
+                <ScrollViewer>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+
+
+                        <Image x:Name="Iphoto" Width="200" Height="150" Grid.Column="0" Grid.Row="0" Margin="20" Grid.RowSpan="10"/>
+
+                        <TextBlock Text="Имя: " Grid.Column="1" Grid.Row="0" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userName" Grid.Column="2" Grid.Row="0" FontSize="19" Height="30" />
+                        <TextBox x:Name="TBuserName" Grid.Row="0" Grid.Column="2" Width="200" Height="30" FontSize="19" Margin="0,0,0,10" Visibility="Collapsed" PreviewTextInput="TBuserName_PreviewTextInput"/>
+
+                        <TextBlock Text="Фамилия: " Grid.Column="1" Grid.Row="1" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userSurname" Grid.Column="2" Grid.Row="1" FontSize="19" Height="30" />
+                        <TextBox x:Name="TBuserSurname" Grid.Row="1" Grid.Column="2" Width="200" Height="30" FontSize="19" Margin="0,0,0,10" Visibility="Collapsed" PreviewTextInput="TBuserSurname_PreviewTextInput"/>
+
+                        <TextBlock Text="Отчество: " Grid.Column="1" Grid.Row="2" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userPatronymic" Grid.Column="2" Grid.Row="2" FontSize="19" Height="30" />
+                        <TextBox x:Name="TBuserPatronymic" Grid.Row="2" Grid.Column="2" Width="200" Height="30" FontSize="19" Margin="0,0,0,10" Visibility="Collapsed" PreviewTextInput="TBuserPatronymic_PreviewTextInput"/>
+
+                        <TextBlock Text="Дата рождения: " Grid.Column="1" Grid.Row="3" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userBorn"  Grid.Column="2" Grid.Row="3" FontSize="19" Height="30" />
+                        <DatePicker x:Name="DPuserBorn" Grid.Row="3" Grid.Column="2" Width="200" Height="30" VerticalAlignment="Center" FontSize="19"  Margin="0,0,0,10" Visibility="Collapsed"/>
+
+                        <TextBlock Text="Телефон: " Grid.Column="1" Grid.Row="4" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userPhone" Grid.Column="2" Grid.Row="4" FontSize="19" Height="30" />
+                        <TextBox x:Name="TBuserPhone" Grid.Row="4" Grid.Column="2" Width="200" FontSize="19" Height="30" Margin="0,0,0,10" Visibility="Collapsed" PreviewTextInput="TBuserPhone_PreviewTextInput"/>
+
+
+                        <TextBlock Text="Логин: " Grid.Column="1" Grid.Row="6" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userLogin" Grid.Column="4" Grid.Row="6" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserLogin" Grid.Row="6" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed"/>
+
+                        <!--<TextBlock Text="Серия паспорта: " Grid.Column="1" Grid.Row="7" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userPasswordSerias" Grid.Column="4" Grid.Row="7" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserPasswordSerias" Grid.Row="7" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed" PreviewTextInput="TBuserPasswordSerias_PreviewTextInput"/>
+
+                        <TextBlock Text="Номер паспорта: " Grid.Column="1" Grid.Row="8" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userPassportNumber" Grid.Column="4" Grid.Row="8" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserPassportNumber" Grid.Row="8" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed" PreviewTextInput="TBuserPassportNumber_PreviewTextInput"/>-->
+
+                        <TextBlock Text="Почта: " Grid.Column="1" Grid.Row="5" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userEmail" Grid.Column="2" Grid.Row="5" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserEmail" Grid.Row="5" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed"/>
+
+                        <TextBlock Text="Улица: " Grid.Column="1" Grid.Row="7" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userStreet" Grid.Column="2" Grid.Row="7" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserStreet" Grid.Row="7" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed"/>
+
+                        <TextBlock Text="Номер дома: " Grid.Column="1" Grid.Row="8" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userNumHome" Grid.Column="2" Grid.Row="8" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserNumHome" Grid.Row="8" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed"/>
+
+                        <TextBlock Text="Номер Квартиры: " Grid.Column="1" Grid.Row="9" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userApartNum" Grid.Column="2" Grid.Row="9" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserApartNum" Grid.Row="9" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed" PreviewTextInput="TBuserApartNum_PreviewTextInput"/>
+
+                        <TextBlock Text="Номер Подъезда: " Grid.Column="1" Grid.Row="10" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userEntranceNum" Grid.Column="2" Grid.Row="10" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserEntranceNum" Grid.Row="10" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed" PreviewTextInput="TBuserEntranceNum_PreviewTextInput"/>
+
+                        <TextBlock Text="Номер Этажа: " Grid.Column="1" Grid.Row="11" FontSize="19" Height="30" />
+                        <TextBlock x:Name="userFloorNum" Grid.Column="2" Grid.Row="11" FontSize="19" Height="30"  />
+                        <TextBox x:Name="TBuserFloorNum" Grid.Row="11" Grid.Column="2" Width="200" FontSize="19" Height="30" Visibility="Collapsed" PreviewTextInput="TBuserFloorNum_PreviewTextInput"/>
+
+                        <Button x:Name="BTNeditUser" Background="#FF49758C" Foreground="White" Grid.Row="15" Grid.Column="1" Margin="10,10" Width="200" Height="60" Content="Редактировать" FontSize="22" Click="BTNeditUser_Click"/>
+                        <Button x:Name="BTNsaveChange" Background="#FF49758C" Foreground="White" Content="Сохранить изменения" Width="200" Height="60" Grid.Row="15" Grid.Column="2" FontSize="18" Click="BTNsaveChange_Click"/>
+                        <Button x:Name="btnEditImg" Background="#FF49758C" Foreground="White" Grid.Row="15" Grid.Column="0" Margin="10,10" Width="200" Height="60" Content="Изменить аватар" FontSize="22" Click="btnEditImg_Click" />
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Товары">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Список категорий -->
+                    <ListView x:Name="CategoriesList" 
+              SelectionChanged="CategoriesList_SelectionChanged"
+              DisplayMemberPath="Наименование"
+              BorderBrush="#DDD" BorderThickness="1"
+              Margin="0,0,10,0"/>
+
+                    <!-- Список товаров -->
+                    <ListView Grid.Column="1" x:Name="ProductsList">
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal" Width="500" />
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="#DDD" BorderThickness="1" CornerRadius="5" Padding="10" Margin="5" Background="White">
+                                    <Grid Width="180">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <!-- Картинка товара -->
+                                        <Image Grid.Row="0"
+                               Source="{Binding ImagePath}"
+                               Width="150"
+                               Height="200"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Stretch="Uniform"
+                               Margin="0,0,0,10"/>
+
+                                        <!-- Название товара -->
+                                        <TextBlock Grid.Row="1"
+                                   Text="{Binding Наименование}"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"/>
+
+                                        <!-- Описание товара -->
+                                        <TextBlock Grid.Row="2"
+                                   Text="{Binding Описание}"
+                                   Margin="0,5,0,5"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Center"/>
+
+                                        <!-- Цена товара -->
+                                        <TextBlock Grid.Row="3"
+                                   Text="{Binding Цена, StringFormat='Цена: {0:F2} руб.'}"
+                                   Foreground="Green"
+                                   HorizontalAlignment="Center"/>
+
+                                        <!-- Кнопка "В корзину" -->
+                                        <Button Grid.Row="4"
+                                Content="В корзину"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Padding="10,5"
+                                Margin="0,10,0,0"
+                                Background="#4CAF50"
+                                Foreground="White"
+                                BorderBrush="#388E3C"
+                                FontWeight="Bold"
+                                Click="AddToCart_Click"/>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <!-- Футер с соцсетями -->
+                    <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
+                        <Image Source="Social/VK.png" Width="24" Height="24" Margin="5" Cursor="Hand" ToolTip="Facebook" MouseDown="Image_MouseDown" Tag="https://vk.com" RenderTransformOrigin="0.521,0.5"/>
+                        <Image Source="Social/TG.png" Width="24" Height="24" Margin="5" Cursor="Hand" ToolTip="Instagram" MouseDown="Image_MouseDown_1" Tag="https://web.telegram.org/"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Корзина" x:Name="TIbasket">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Заголовок корзины -->
+                    <TextBlock Grid.Row="0" Text="Корзина" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" />
+
+                    <!-- Корзина -->
+                    <DataGrid Grid.Row="1" x:Name="CartGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,5,0,0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Товар" Binding="{Binding Товары.Наименование}" Width="Auto"/>
+                            <DataGridTextColumn Header="Цена" Binding="{Binding Товары.Цена, StringFormat={}{0:F2}}" Width="Auto"/>
+                            <DataGridTemplateColumn Header="Количество" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button x:Name="DecreaseQuantity" Content="-" Width="30"  Tag="{Binding}" Click="DecreaseQuantity_Click" />
+                                            <TextBlock Text="{Binding Количество}" Width="50" Margin="30,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <Button x:Name="IncreaseQuantit" Content="+" Width="30"  Tag="{Binding}" Click="IncreaseQuantit_Click" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Стоимость" Binding="{Binding Стоимость}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock Grid.Row="2" FontWeight="Bold" Text="Общая стоимость корзины: " Margin="0,10" x:Name="TBfinalSum"/>
+                    <Button x:Name="BTNdesignOrder" Grid.Row="3" Background="#FF49758C" Foreground="White" Width="130" Height="35" HorizontalAlignment="Left" Content="Оформить заказ" Click="BTNdesignOrder_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
